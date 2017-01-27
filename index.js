@@ -1,6 +1,5 @@
 // Server requirements
 const express = require('express'),
-  bodyparser = require('body-parser'),
   methodOverride = require('method-override'),
   cors = require('cors'),
   app = express();
@@ -10,7 +9,6 @@ const metadata = require('./routes/metadata');
 
 // Server setup
 app.use(cors());
-app.use(bodyparser.json({ type: '*/*' }));
 app.use(methodOverride('_method'));
 
 // Server index file
